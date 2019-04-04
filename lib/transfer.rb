@@ -3,8 +3,8 @@ require 'pry'
 
 class Transfer
   attr_reader :sender, :receiver, :status, :amount
-  @amount_history = 0
   
+  @amount_history = 0
   
   def initialize(sender, receiver, amount)
     @sender = sender
@@ -37,5 +37,7 @@ class Transfer
   def reverse_transfer
     sender.balance += @amount_history
     receiver.balance -= @amount_history
+    @amount_history = 0
+    @status = 'reversed'
   end
 end
