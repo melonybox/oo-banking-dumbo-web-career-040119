@@ -28,5 +28,6 @@ class Transfer
       @status = 'complete'
       @amount -= amount
     end
+    binding.pry
   end
 end
