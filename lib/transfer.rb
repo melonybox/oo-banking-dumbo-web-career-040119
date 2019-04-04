@@ -21,6 +21,7 @@ class Transfer
   
   def execute_transaction
     if sender.valid? == false
+      binding.pry
       "Transaction rejected. Please check your account balance."
     else
       sender.balance -= amount
@@ -28,6 +29,5 @@ class Transfer
       @status = 'complete'
       @amount -= amount
     end
-    binding.pry
   end
 end
