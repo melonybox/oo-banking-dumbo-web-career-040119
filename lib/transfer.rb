@@ -3,12 +3,15 @@ require 'pry'
 
 class Transfer
   attr_reader :sender, :receiver, :status, :amount
+  @amount_history = 0
+  
   
   def initialize(sender, receiver, amount)
     @sender = sender
     @receiver = receiver
     @status = "pending"
     @amount = amount
+    @amount_history = amount
   end
   
   def valid?
