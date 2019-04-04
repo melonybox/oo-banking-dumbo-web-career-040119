@@ -30,4 +30,7 @@ class Transfer
       @amount -= amount
     end
   end
+  
+  def reverse_transfer
+  end
 end
