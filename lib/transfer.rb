@@ -21,7 +21,7 @@ class Transfer
   
   def execute_transaction
     binding.pry
-    if sender.valid? == false
+    if sender.balance < amount
       "Transaction rejected. Please check your account balance."
     else
       sender.balance -= amount
