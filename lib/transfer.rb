@@ -11,8 +11,6 @@ class Transfer
     @amount = amount
   end
   
-  @bad_transfer = "Transaction rejected. Please check your account balance"
-  
   def valid?
     if sender.valid? && receiver.valid? == true
       true
